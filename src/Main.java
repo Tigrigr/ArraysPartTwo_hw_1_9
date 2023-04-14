@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static int[] generateRandomArray() {
@@ -29,7 +30,6 @@ public class Main {
         int[] bookCost = generateRandomArray();
         System.out.println();
         System.out.println("Задача 2");
-        System.out.println(Arrays.toString(bookCost));
         int maxCost = -1;
         int minCost = 200_001;
         for (int i : bookCost) {
@@ -41,5 +41,17 @@ public class Main {
         }
         System.out.println("Минимальная сумма трат составила " + minCost + " рублей.");
         System.out.println("Максимальная сумма трат составила " + maxCost + " рублей.");
+    }
+
+    public static void task3() {
+        int[] bookCost = generateRandomArray();
+        System.out.println();
+        System.out.println("Задача 3");
+        int totalCost = 0;
+        for (int i : bookCost) {
+            totalCost += i;
+        }
+        double averageCost = totalCost / bookCost.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averageCost + " рублей.");
     }
 }
