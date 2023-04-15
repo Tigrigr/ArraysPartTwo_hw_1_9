@@ -52,11 +52,12 @@ public class Main {
         for (int i : bookCost) {
             totalCost += i;
         }
-        double averageCost = totalCost / bookCost.length;
-        System.out.println("Средняя сумма трат за месяц составила " + averageCost + " рублей.");
+        double averageCost = (double)totalCost / bookCost.length;
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей", averageCost);
     }
 
     public static void task4() {
+        System.out.println();
         System.out.println();
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
